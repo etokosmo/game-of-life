@@ -14,9 +14,9 @@
         {{ game.counter }}
       </div>
       <table class="world">
-        {% for i in range(game._GameOfLife__height) %}
+        {% for i in range(game.world|length) %}
           <tr>
-            {% for j in range(game._GameOfLife__width) %}
+            {% for j in range(game.world[i]|length) %}
               {% if game.world[i][j] %}
                 <td class="cell living-cell"></td>
               {% elif game.world[i][j] == 0 and game.old_world[i][j] %}
